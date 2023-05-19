@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Solar Energy</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="q42.css">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body onload="changeBg()">
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="aboutq1.html">About</a>
+	  <a href="ref.html">References</a>
+	</div>
+	<span onclick="openNav()">&#9776;</span>
+		<div id = "intro">
+			<h2>Introduction to Solar Energy</h2>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<form onsubmit = "return myFunction();">
+			<fieldset>
+				<legend>FeedBack</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name"><br>
+ 
+				<label for="section">Email:</label>
+				<input type="text" id="section" name="section"><br>
+ 
+				<label for="date">Date:</label>
+				<input type="date" id="date" name="date"><br>
+			 
+				<label for="days">Age</label>
+				<input type="number" id="days" name="days"><br>
+				
+				<fieldset>
+					 <legend>Rating</Legend>
+					 <input type="radio" id="rate1" name="rating" value="1">
+					 <label for="rate1">1 star</label>
+
+					 <input type="radio" id="rate2" name="rating" value="2">
+					 <label for="rate2">2 stars</label>
+
+					 <input type="radio" id="rate3" name="rating" value="3">
+					 <label for="rate3">3 stars</label>
+
+					 <input type="radio" id="rate4" name="rating" value="4">
+					 <label for="rate4">4 stars</label>
+
+					 <input type="radio" id="rate5" name="rating" value="5">
+					 <label for="rate5">5 stars</label>
+				</fieldset>
+			 
+				<label for="comments">Feedback: </label></br>
+				<textarea id="tArea" name="comments" rows="4" cols="50"> </textarea><br><br>
+				
+				<label for="comments">Suggestions: </label></br>
+				<textarea id="tArea" name="comments" rows="4" cols="50"> </textarea><br><br>
+				
+				<input type="submit" value="Submit">
+				<input type="reset" value="Clear">
+			</fieldset>
+		</form>
+		<br><br><br><br><br><br>
+		<footer>
+            <p>gjplaza@crc.pshs.edu.ph</p>
+		</footer>
+		<script>
+		var prevScrollpos = window.pageYOffset;
+		function changeBg()	{
+  
+			var backgrounds = ["solpic1.jpg", "solpic2.jpg", "solpic3.jpg", "solpic4.jpg", "solpic5.jpg"];
+  
+			var imgShown = document.body.style.backgroundImage;
+			var newNumber = Math.floor(Math.random()*backgrounds.length);
+			document.body.style.background = 'url('+backgrounds[newNumber]+')';
+			document.body.style.backgroundSize = "cover";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundAttachment = "fixed";
+			document.body.style.backgroundPosition = "center";
+			}
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("intro").style.top = "10%";
+			} else {
+				document.getElementById("intro").style.top = "-50px";
+			}
+				prevScrollpos = currentScrollPos;
+			}
+			
+			function myFunction(){
+				alert("Thank you for your feedback!!!");
+			}
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+			
+		</script>
+	</body>
+</html>

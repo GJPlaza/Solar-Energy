@@ -1,0 +1,32 @@
+<!DOCUMENT html>
+<html>
+	<head></head>
+	<body>
+	<h3>FN</h3>
+	<input id="FN">
+	<h3>LN</h3>
+	<input id="LN">
+	<h3>BY</h3>
+	<input id="BY">
+	<h3>CTs</h3>
+	<input id="CT">
+	<br><br>
+	<button onclick ="login()">Login</button>
+	</body>
+	<script>
+	var firstName, lastName, birthYear, currentTime, age;
+	
+	function login() {
+	firstName = document.getElementById("FN").value;
+	lastName = document.getElementById("LN").value;
+	birthYear = parseInt(document.getElementById("BY").value);
+	currentTime = document.getElementById("CT").value;
+	age = 2023 - birthYear;
+	if ( age >= 18) {
+	  alert("[" + currentTime + "]" + " " + firstName + " " + lastName + ", Legal Age");
+	  }else{
+	  alert("You are not allowed to marry");
+	  }
+	}
+	</script>
+	</html>
