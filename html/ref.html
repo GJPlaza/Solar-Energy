@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Solar Energy</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="q41.css">
+		 <link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body onload="changeBg()">
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="aboutq1.html">About</a>
+	  <a href="feedback.html">Feedback</a>
+	</div>
+	<span onclick="openNav()">&#9776;</span>
+		<div id = "intro">
+			<h2>Introduction to Solar Energy</h2>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class ="solarTitle1">
+			<h3>References</h3>
+			<br><br>
+			<div class ="solarInfo1">
+				<ul>
+				<li>International Energy Agency (IEA). (2020). Solar Photovoltaic Power. Retrieved from https://www.iea.org/topics/solar-photovoltaic-power</li>
+				<li>U.S. Department of Energy (DOE). (2021). Solar Energy Technologies Office. Retrieved from https://www.energy.gov/eere/solar/solar-energy-technologies-office</li>
+				<li>International Renewable Energy Agency (IRENA). (2021). Renewable Power Generation Costs in 2020. Retrieved from https://www.irena.org/publications/2021/Apr/Renewable-power-generation-costs-in-2020</li>
+				<li>International Renewable Energy Agency (IRENA). (2020). Renewable Energy: A Gender Perspective. Retrieved from https://www.irena.org/publications/2020/May/Renewable-energy-A-gender-perspective</li>
+				<li>U.S. Department of Energy: Solar Energy Technologies Office - https://www.energy.gov/eere/solar/solar-energy-technologies-office</li>
+				<li>National Renewable Energy Laboratory (NREL) - Solar Energy Basics - https://www.nrel.gov/education/pdfs/solar_energy_basics.pdf</li>
+				<li>https://theroundup.org/solar-power-statistics/</li>
+				</ul>
+			</div>
+			<br><br>
+		</div>
+		<br><br><br><br><br><br>
+		<footer>
+            <p>gjplaza@crc.pshs.edu.ph</p>
+		</footer>
+		<script>
+		var prevScrollpos = window.pageYOffset;
+		function changeBg()	{
+  
+			var backgrounds = ["solpic1.jpg", "solpic2.jpg", "solpic3.jpg", "solpic4.jpg", "solpic5.jpg"];
+  
+			var imgShown = document.body.style.backgroundImage;
+			var newNumber = Math.floor(Math.random()*backgrounds.length);
+			document.body.style.background = 'url('+backgrounds[newNumber]+')';
+			document.body.style.backgroundSize = "cover";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundAttachment = "fixed";
+			document.body.style.backgroundPosition = "center";
+			}
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("intro").style.top = "10%";
+			} else {
+				document.getElementById("intro").style.top = "-50px";
+			}
+				prevScrollpos = currentScrollPos;
+			}
+			
+			function myFunction(){
+				alert("Thank you for your feedback!!!");
+			}
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+			
+		</script>
+	</body>
+</html>

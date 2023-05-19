@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solar Energy</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="q43.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body onload="changeBg()">
+  <div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a href="index.html">Home</a>
+	  <a href="feedback.html">Feedback</a>
+	  <a href="ref.html">References</a>
+	</div>
+	<span onclick="openNav()">&#9776;</span>
+	<div id = "intro">
+		<h2>Introduction to Solar Energy</h2>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<div id="abtTitle">
+		<h3>About Me</h3>
+		<div id="abtDesc">
+			<div class="row">
+				<div class="column1">
+					<img id="pfp" src="pfpp.png">
+				</div>
+				<div class="column1">
+					<ul>
+						<li>Name: Plaza, Gaudenis Japhet C.</li>
+						<li>Section: Lithium</li>
+						<li>Grade Level: 9</li>
+						<li>Phone No. : 09052255612</li>
+						<li>Email: gjplaza@crc.pshs.edu.ph</li>
+					</ul>
+					<p>You can also contact me through Messenger and Facebook.</p>
+					 <div class="row">
+						<div class="column0">
+							<a href="https://www.facebook.com/"><img class="icon" src="fb.jpg"></a>
+						</div>
+						<div class="column0">
+							<a href="https://www.messenger.com/"><img class="icon" src="mes2.jpg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+        <p>gjplaza@crc.pshs.edu.ph</p>
+	</footer>
+	<script>
+		var prevScrollpos = window.pageYOffset;
+		function changeBg()	{
+  
+			var backgrounds = ["solpic1.jpg", "solpic2.jpg", "solpic3.jpg", "solpic4.jpg", "solpic5.jpg"];
+  
+			var imgShown = document.body.style.backgroundImage;
+			var newNumber = Math.floor(Math.random()*backgrounds.length);
+			document.body.style.background = 'url('+backgrounds[newNumber]+')';
+			document.body.style.backgroundSize = "cover";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundAttachment = "fixed";
+			document.body.style.backgroundPosition = "center";
+			}
+			window.onscroll = function() {
+			var currentScrollPos = window.pageYOffset;
+			if (prevScrollpos > currentScrollPos) {
+				document.getElementById("intro").style.top = "10%";
+			} else {
+				document.getElementById("intro").style.top = "-50px";
+			}
+				prevScrollpos = currentScrollPos;
+			}
+			function openNav() {
+			  document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			  document.getElementById("mySidenav").style.width = "0";
+			}
+			
+		</script>
+  </body>
+</html>
